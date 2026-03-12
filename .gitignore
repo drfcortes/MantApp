@@ -1,0 +1,14 @@
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+bitacoras/
+imagenes_equipos/
+
+
+.DS_Store
+Thumbs.db
