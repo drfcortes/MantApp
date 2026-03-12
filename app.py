@@ -262,10 +262,13 @@ def render_qr_sidebar() -> None:
     st.sidebar.markdown("---")
     st.sidebar.subheader("QR de la app")
 
-    qr_buffer = generar_qr_buffer(APP_URL)
-    qr_bytes = qr_buffer.getvalue()
+    qr_bytes = generar_qr_buffer(APP_URL)
 
-    st.sidebar.image(qr_bytes, caption="Escanea para abrir la app", use_container_width=True)
+    st.sidebar.image(
+        qr_bytes,
+        caption="Escanea para abrir la app",
+        use_container_width=True,
+    )
 
     st.sidebar.download_button(
         label="📥 Descargar QR",
@@ -275,7 +278,6 @@ def render_qr_sidebar() -> None:
     )
 
     st.sidebar.caption(APP_URL)
-
 
 # =========================================================
 # CARGA INICIAL
